@@ -1,0 +1,409 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SearchApp - Movies & Music</title>
+    <meta name="description"
+          content="Discover trending movies, popular films and music.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="header-left">
+            <button class="menu-btn" id="menu_btn" type="button">
+                ☰ <span>Menu</span>
+            </button>
+
+            <a class="brand" href="#" aria-label="SearchApp home">
+                <span class="brand-icon">ASR</span>
+                <span>ASR-VIBES<span class="brand-dot">.io</span></span>
+            </a>
+        </div>
+
+        <div class="header-center">
+            <h1>Audio. Screen. Rhytm.</h1>
+            <p>Your place for movies, music and entertainment.</p>
+        </div>
+
+        <div class="header-right">
+            <button class="header-btn" id="theme_btn" type="button"
+                    aria-label="Toggle dark and light mode">
+                <span id="theme_icon">☀</span>
+                <span id="theme_text">Light</span>
+            </button>
+
+            <button class="header-btn" id="sign_in_btn" type="button">
+                Sign In
+            </button>
+
+            <button class="header-btn" id="sign_out_btn" type="button">
+                Sign Out
+            </button>
+        </div>
+    </header>
+
+    <!-- Optional menu panel -->
+    <aside class="menu-panel" id="menu_panel" hidden>
+        <a href="#home">Home</a>
+        <a href="#trending_movies">Trending Movies</a>
+        <a href="#popular_movies">Popular Movies</a>
+        <a href="#popular_music">Popular Music</a>
+    </aside>
+
+    <main id="home">
+  
+        <section class="search-section" aria-label="Search movies and music">
+            <form class="search-bar" id="search_form">
+                <input
+                    type="search"
+                    id="search_here"
+                    name="query"
+                    placeholder="Search movies, songs, artists..."
+                    aria-label="Search movies, songs or artists"
+                >
+
+                <button type="submit" id="search_btn">
+                    <span>⌕</span> Search
+                </button>
+            </form>
+
+            <nav class="category-tabs" aria-label="Search category">
+                <button class="category-btn active"
+                        type="button" data-category="all">
+                    All
+                </button>
+
+                <button class="category-btn"
+                        type="button" data-category="movies">
+                    Movies
+                </button>
+
+                <button class="category-btn"
+                        type="button" data-category="music">
+                    Music
+                </button>
+            </nav>
+
+         
+            <p id="search_status" class="search-status" aria-live="polite"></p>
+        </section>
+
+    
+        <section class="content-section" id="trending_movies">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">MOVIES · TV · ENTERTAINMENT</span>
+                    <h2>Trending Movies</h2>
+                    <p class="section-description">
+                        Discover what everyone is watching.
+                    </p>
+                </div>
+            </div>
+
+            <nav class="sub-tabs" aria-label="Movie collections">
+                <button class="sub-tab active" type="button"
+                        data-list="trending-movies">
+                    Trending Movies
+                </button>
+
+                <button class="sub-tab" type="button"
+                        data-list="popular-movies">
+                    Popular Movies
+                </button>
+
+                <button class="sub-tab" type="button"
+                        data-list="now-playing">
+                    Now Playing
+                </button>
+
+                <button class="sub-tab" type="button"
+                        data-list="upcoming">
+                    Upcoming
+                </button>
+
+                <button class="sub-tab" type="button"
+                        data-list="top-rated">
+                    Top Rated
+                </button>
+            </nav>
+
+            <div class="media-grid" id="movie_cards">
+
+                <article class="movie-card">
+                    <div class="poster poster-1">
+                        <span class="media-label">MOVIE</span>
+                        <span class="poster-symbol">01</span>
+                        <span class="rating">★ -- / 10</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Trending Movie 1</h3>
+                        <p>Release year: —</p>
+                    </div>
+                </article>
+
+                <article class="movie-card">
+                    <div class="poster poster-2">
+                        <span class="media-label">MOVIE</span>
+                        <span class="poster-symbol">02</span>
+                        <span class="rating">★ -- / 10</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Trending Movie 2</h3>
+                        <p>Release year: —</p>
+                    </div>
+                </article>
+
+                <article class="movie-card">
+                    <div class="poster poster-3">
+                        <span class="media-label">MOVIE</span>
+                        <span class="poster-symbol">03</span>
+                        <span class="rating">★ -- / 10</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Trending Movie 3</h3>
+                        <p>Release year: —</p>
+                    </div>
+                </article>
+
+                <article class="movie-card">
+                    <div class="poster poster-4">
+                        <span class="media-label">MOVIE</span>
+                        <span class="poster-symbol">04</span>
+                        <span class="rating">★ -- / 10</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Trending Movie 4</h3>
+                        <p>Release year: —</p>
+                    </div>
+                </article>
+
+                <article class="movie-card">
+                    <div class="poster poster-5">
+                        <span class="media-label">MOVIE</span>
+                        <span class="poster-symbol">05</span>
+                        <span class="rating">★ -- / 10</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Trending Movie 5</h3>
+                        <p>Release year: —</p>
+                    </div>
+                </article>
+
+                <article class="movie-card">
+                    <div class="poster poster-6">
+                        <span class="media-label">MOVIE</span>
+                        <span class="poster-symbol">06</span>
+                        <span class="rating">★ -- / 10</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Trending Movie 6</h3>
+                        <p>Release year: —</p>
+                    </div>
+                </article>
+
+                <article class="movie-card">
+                    <div class="poster poster-7">
+                        <span class="media-label">MOVIE</span>
+                        <span class="poster-symbol">07</span>
+                        <span class="rating">★ -- / 10</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Trending Movie 7</h3>
+                        <p>Release year: —</p>
+                    </div>
+                </article>
+
+                <article class="movie-card">
+                    <div class="poster poster-8">
+                        <span class="media-label">MOVIE</span>
+                        <span class="poster-symbol">08</span>
+                        <span class="rating">★ -- / 10</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Trending Movie 8</h3>
+                        <p>Release year: —</p>
+                    </div>
+                </article>
+
+                <article class="movie-card">
+                    <div class="poster poster-9">
+                        <span class="media-label">MOVIE</span>
+                        <span class="poster-symbol">09</span>
+                        <span class="rating">★ -- / 10</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Trending Movie 9</h3>
+                        <p>Release year: —</p>
+                    </div>
+                </article>
+
+                <article class="movie-card">
+                    <div class="poster poster-10">
+                        <span class="media-label">MOVIE</span>
+                        <span class="poster-symbol">10</span>
+                        <span class="rating">★ -- / 10</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Trending Movie 10</h3>
+                        <p>Release year: —</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="content-section" id="popular_movies">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">FAN FAVOURITES</span>
+                    <h2>Popular Movies</h2>
+                    <p class="section-description">
+                        Explore movies people love.
+                    </p>
+                </div>
+            </div>
+
+            <div class="empty-state" id="popular_movie_cards">
+                Popular movie posters will appear here.
+            </div>
+        </section>
+
+        <!-- Popular Music -->
+        <section class="content-section" id="popular_music">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">MUSIC · SONGS · ARTISTS</span>
+                    <h2>Popular Music</h2>
+                    <p class="section-description">
+                        Discover popular songs and artists.
+                    </p>
+                </div>
+            </div>
+
+            <nav class="sub-tabs" aria-label="Music collections">
+                <button class="sub-tab active" type="button"
+                        data-list="popular-songs">
+                    Popular Songs
+                </button>
+
+                <button class="sub-tab" type="button"
+                        data-list="top-songs">
+                    Top Songs
+                </button>
+
+                <button class="sub-tab" type="button"
+                        data-list="new-music">
+                    New Music
+                </button>
+            </nav>
+
+            <div class="media-grid music-grid" id="music_cards">
+
+                <article class="music-card">
+                    <div class="album-cover album-1">
+                        <span>♪</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Popular Song 1</h3>
+                        <p>Artist name</p>
+                    </div>
+                </article>
+
+                <article class="music-card">
+                    <div class="album-cover album-2">
+                        <span>♫</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Popular Song 2</h3>
+                        <p>Artist name</p>
+                    </div>
+                </article>
+
+                <article class="music-card">
+                    <div class="album-cover album-3">
+                        <span>♪</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Popular Song 3</h3>
+                        <p>Artist name</p>
+                    </div>
+                </article>
+
+                <article class="music-card">
+                    <div class="album-cover album-4">
+                        <span>♫</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Popular Song 4</h3>
+                        <p>Artist name</p>
+                    </div>
+                </article>
+
+                <article class="music-card">
+                    <div class="album-cover album-5">
+                        <span>♪</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Popular Song 5</h3>
+                        <p>Artist name</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Future movie details -->
+        <section class="content-section details-section"
+                 id="movie_details_section">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">EXPLORE MORE</span>
+                    <h2>Movie Details</h2>
+                </div>
+            </div>
+
+            <div class="details-layout">
+                <div id="poster" class="details-poster">
+                    Select a movie to view its poster.
+                </div>
+
+                <div id="movie_details" class="details-content">
+                    <p>Movie information will appear here.</p>
+
+                    <button id="add_watchlist" class="primary-btn"
+                            type="button">
+                        + Add to Watchlist
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Future watchlist -->
+        <section class="content-section" id="watchlist">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">YOUR COLLECTION</span>
+                    <h2>My Watchlist</h2>
+                </div>
+            </div>
+
+            <div id="saved_movies" class="empty-state">
+                Your saved movies will appear here.
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>SearchApp.io · Discover movies and music</p>
+    </footer>
+
+    <!-- JavaScript will be added later -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
